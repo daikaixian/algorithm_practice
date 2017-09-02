@@ -34,9 +34,5 @@ package org.water.practice.gohigher.algorithm.leetcode;
 
 }
 
-class ListNode {
-  int val;
-  ListNode next;
-  ListNode(int x) { val = x; }
-}
+
 
