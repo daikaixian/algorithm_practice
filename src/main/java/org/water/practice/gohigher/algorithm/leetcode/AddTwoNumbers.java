@@ -32,37 +32,28 @@ package org.water.practice.gohigher.algorithm.leetcode;
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode dummyHead = new ListNode(0);
     ListNode current = dummyHead;
-
     int plus = 0;
     while (l1 != null || l2!= null) {
       int sum = 0;
-
       if (l1 != null) {
         sum += l1.val;
       }
-
       if (l2 != null){
         sum += l2.val;
       }
       sum = sum + plus;
       plus = sum / 10;  //下一轮的plus.
       sum = sum % 10;   // 余数.
-
       ListNode newNode = new ListNode(sum);
       current.next = newNode;
       current = newNode;
-
       l1 = (l1 == null ? l1: l1.next);
       l2 = (l2 == null ? l2: l2.next);
-
     }
     if (plus > 0 ){
       ListNode newNode = new ListNode(plus);
       current.next = newNode;
     }
-
-
-
     return dummyHead.next;
   }
 
