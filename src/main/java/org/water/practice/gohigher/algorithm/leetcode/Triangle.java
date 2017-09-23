@@ -29,15 +29,31 @@ public class Triangle {
    * what? [[-1],[2,3],[1,-1,-3]] Output: -2  Expected:-1
    */
   public int minimumTotal(List<List<Integer>> triangle) {
-    int sum  = 0;
-
-    for (List<Integer> list : triangle) {
-      Collections.sort(list);
-      sum += list.get(0);
+      int sum =0;
+      sum  = minSum(triangle, 0, 0);
+      return sum;
     }
-    return sum;
 
 
-  }
+    private int minSum(List<List<Integer>> triangle, int i, int j) {
+      if (triangle == null) {
+        return 0;
+      }
+      int sum = 0;
+      if (i == triangle.size() - 1) {
+        sum = triangle.get(i).get(j);
+      }
+
+      if (i < triangle.size() - 1) {
+        sum =  triangle.get(i).get(j) + Math.min(minSum(triangle, i+1,j), minSum(triangle, i+1, j+1));
+      }
+
+      return sum ;
+
+
+    }
+
+
+
 
 }
