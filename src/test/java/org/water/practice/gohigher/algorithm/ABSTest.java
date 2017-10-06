@@ -27,6 +27,8 @@ public class ABSTest {
     System.out.println(stringBuffer);
 
 
+    String a ="";
+
   }
 
 
