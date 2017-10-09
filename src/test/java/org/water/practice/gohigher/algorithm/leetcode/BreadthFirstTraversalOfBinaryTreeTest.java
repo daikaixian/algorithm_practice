@@ -2,8 +2,6 @@ package org.water.practice.gohigher.algorithm.leetcode;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by water on 9/10/17.
  */
@@ -38,9 +36,23 @@ public class BreadthFirstTraversalOfBinaryTreeTest {
 
 
     System.out.println("*********************");
-    //深度遍历?
+    //深度遍历? 前序
     //应该是1,2,4,6,3,5,7
-    breadthFirstTraversalOfBinaryTree.depthFirstTraversal(node1);
+    breadthFirstTraversalOfBinaryTree.preOrderDepthFirstTraversal(node1);
+
+
+
+    System.out.println("*********************");
+    // 中序遍历:
+    //应该是:6,4,2,1,5,3,7
+    breadthFirstTraversalOfBinaryTree.inOrderDepthFirstTraversal(node1);
+
+    System.out.println("*********************");
+    // 后序遍历:
+    //应该是:6,4,2,5,7,3,1
+    breadthFirstTraversalOfBinaryTree.postOrderDepthFirstTraversal(node1);
+
+
 
   }
 }

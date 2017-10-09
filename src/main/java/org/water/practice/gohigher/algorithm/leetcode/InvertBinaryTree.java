@@ -12,13 +12,8 @@ public class InvertBinaryTree {
    * 2. 思路,递归.
    *
    * 3. 时间复杂度? O(n) + O(Log N)
-   *
-   *
-   *
    */
   public TreeNode invertTree(TreeNode root) {
-
-
     //recursion terminator
 
     //current level processing
@@ -26,8 +21,6 @@ public class InvertBinaryTree {
     //drill down.
 
     //如何得到链表的中间节点?
-
-
     // 判断异常
     if (root == null) {
       return null;
@@ -43,10 +36,7 @@ public class InvertBinaryTree {
     //递归?
     invertTree(root.left);
     invertTree(root.right);
-
     return root;
-
-
   }
 
   /**
