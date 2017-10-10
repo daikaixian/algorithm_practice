@@ -18,8 +18,6 @@ public class QuickSort {
   }
 
   private static  void quickSort(int[] nums, int low, int high){
-
-
     int i = low;
     int j = high;
     int pivot = nums[(low + high)/2];
@@ -38,21 +36,18 @@ public class QuickSort {
         int tmp = nums[i];
         nums[i] = nums[j];
         nums[j] = tmp;
-
         // go on
         i++;
         j--;
       }
 
     }
-
     if( i< high) {
       quickSort(nums, i, high);
     }
     if (low < j) {
       quickSort(nums, low, j);
     }
-
   }
 
   public static void main(String[] args) {
