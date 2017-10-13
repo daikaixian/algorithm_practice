@@ -105,6 +105,10 @@ class Son extends Thread{
 // ------------------------------------------------------------------------------------------------
 
 //以下是转账功能的伪代码.
+
+  /*
+
+
 public synchronized void transfer(Account from, Account to, int money) {
   try {
     //startTransaction.
@@ -169,4 +173,10 @@ class AccountService {
       JDBCUtils.close();
     }
   }
+
 }
+
+ */
+
+
+
